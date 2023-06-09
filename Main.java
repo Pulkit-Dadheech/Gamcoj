@@ -4,14 +4,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter your Game Choice");
-        System.out.println("1. Sudoku");
+        System.out.println("1. Rock Paper Scissor");
         System.out.println("2. Random Number Generator");
         System.out.println("3. TicTacToe");
-        System.out.println("4. Rock Paper Scissor");
+        System.out.println("4. Snake and Ladder");
         int choice=sc.nextInt();
         if(choice==1) {
-            sudoku s=new sudoku();
-            s.sudosol();
+
+            RockPaperScissor r=new RockPaperScissor();
+            r.RPS();
         }
 
         else if(choice==2) {
@@ -24,9 +25,11 @@ public class Main {
             t.board();
         }
         else if(choice==4) {
+            snakeandladder player1 = new snakeandladder();
 
-            RockPaperScissor r=new RockPaperScissor();
-            r.RPS();
+
+            player1.playGame();
+
         }
         else{
             System.out.println("Invalid Input");
